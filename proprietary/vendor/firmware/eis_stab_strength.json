@@ -1,0 +1,59 @@
+[
+    {
+        "Version" : "2023/06/15 10:16:00",
+        "// Front in S23FE" : {},
+        "0" : {
+                "//ExposureValues means " : ["0", "1/180", "1/100", "1/60"],
+                "ExposureValues" : [0, 5554000, 9995000, 16674000],
+                "Stable" : [0, 0, 0, 0],
+                "Panning" : [0, 0, 0, 0],
+                "Walking" : [0, 0, 0, 0],
+                "Running" : [0, 0, 0, 0]
+        },
+        "// Wide in S23FE" : {},
+        "32" : {
+                "//ExposureValues means " : ["0", "1/180", "1/100", "1/60"],
+                "ExposureValues" : [0, 5554000, 9995000, 16674000],
+                "Stable" : [0, 0, 0, 0],
+                "Panning" : [0, 0, 0, 0],
+                "Walking" : [0, 0, 0, 0],
+                "Running" : [0, 0, 0, 0]
+        },
+        "// Wide with Supersteady in S23FE" : {},
+        "32_Supersteady" : {
+                "//ExposureValues means " : ["0", "1/180", "1/100", "1/60"],
+                "ExposureValues" : [0, 5554000, 9995000, 16674000],
+                "Stable" : [0, 0, 0, 0],
+                "Panning" : [0, 0, 0, 0],
+                "Walking" : [0, 0, 0, 0],
+                "Running" : [0, 0, 0, 0]
+        },
+        "// Tele in S23FE" : {},
+        "33" : {
+                "//ExposureValues means " : ["0", "1/180", "1/100", "1/60"],
+                "ExposureValues" : [0, 5554000, 9995000, 16674000],
+                "Stable" : [0, 0, 0, 0],
+                "Panning" : [0, 0, 0, 0],
+                "Walking" : [0, 0, 0, 0],
+                "Running" : [0, 0, 0, 0]
+        },
+        "// UW in S23FE" : {},
+        "36" : {
+                "//ExposureValues means " : ["0", "1/180", "1/100", "1/60"],
+                "ExposureValues" : [0, 5554000, 9995000, 16674000],
+                "Stable" : [0, 0, 0, 0],
+                "Panning" : [0, 0, 0, 0],
+                "Walking" : [0, 0, 0, 0],
+                "Running" : [0, 0, 0, 0]
+        },
+        "// UW with Supersteady in S23FE" : {},
+        "36_Supersteady" : {
+                "//ExposureValues means " : ["0", "1/180", "1/100", "1/60"],
+                "ExposureValues" : [0, 5554000, 9995000, 16674000],
+                "Stable" : [0, 0, 0, 0],
+                "Panning" : [0, 0, 0, 0],
+                "Walking" : [0, 0, 0, 0],
+                "Running" : [0, 0, 0, 0]
+        }
+    }
+]
