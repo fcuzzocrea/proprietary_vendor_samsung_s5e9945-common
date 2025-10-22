@@ -6,53 +6,26 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/s5e9945
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/s5e9945/proprietary/recovery/root/init.recovery.s5e9945.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.s5e9945.rc \
     vendor/samsung/s5e9945/proprietary/recovery/root/lib/firmware/sgpu/vangogh_lite_unified_evt1.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/sgpu/vangogh_lite_unified_evt1.bin \
     vendor/samsung/s5e9945/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/samsung/s5e9945/proprietary/vendor/etc/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/LVACFS_Configuration.txt \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/audio_board_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_board_info.xml \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/dqe/calib_data_colormode0_off.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dqe/calib_data_colormode0_off.xml \
+    vendor/samsung/s5e9945/proprietary/vendor/etc/enn/custom_mode_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/enn/custom_mode_config.json \
     vendor/samsung/s5e9945/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/gnss/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/hermesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hermesd.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/hwc3.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.gps.sh.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.sh.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.nfc.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nfc.samsung.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.sensorhub.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sensorhub.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.vendor.onebinary.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.onebinary.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/sec-nfc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sec-nfc-service.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/teegris_tui.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_tui.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss-service.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rild.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/wifi_qcom_ap_exynos.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_qcom_ap_exynos.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/samsung/s5e9945/proprietary/vendor/etc/nfc/sec_s3nsen6_hwreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen6_hwreg.bin \
     vendor/samsung/s5e9945/proprietary/vendor/etc/nfc/sec_s3nsen6_swreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen6_swreg.bin \
     vendor/samsung/s5e9945/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/samsung/s5e9945/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
     vendor/samsung/s5e9945/proprietary/vendor/etc/sound_trigger_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_info.xml \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/00_generic_xtalk_shape.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/00_generic_xtalk_shape.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/APBargeIn_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APBargeIn_AUDIO_SLSI.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/APBiBF_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APBiBF_AUDIO_SLSI.bin \
@@ -145,9 +118,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/vl53l8.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/vl53l8.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/volctrl.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/volctrl.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/volumemonitor.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/volumemonitor.bin \
-    vendor/samsung/s5e9945/proprietary/vendor/firmware/wlan-connection-roaming-backup.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan-connection-roaming-backup.ini \
-    vendor/samsung/s5e9945/proprietary/vendor/firmware/wlan-connection-roaming.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan-connection-roaming.ini \
-    vendor/samsung/s5e9945/proprietary/vendor/firmware/wlan/kiwi_v2/qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/kiwi_v2/qcom_cfg.ini \
     vendor/samsung/s5e9945/proprietary/vendor/tee/00000000-0000-0000-0000-42494f535542:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-42494f535542 \
     vendor/samsung/s5e9945/proprietary/vendor/tee/00000000-0000-0000-0000-46494e474502:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-46494e474502 \
     vendor/samsung/s5e9945/proprietary/vendor/tee/00000000-0000-0000-0000-4d5053545549:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-4d5053545549 \
@@ -209,20 +179,28 @@ PRODUCT_PACKAGES += \
     libaudioproxy2 \
     libaudioroute_samsung \
     libcav \
+    libcdi \
+    libcdi_wrapper \
+    libcommon \
+    libcrane_compiler \
     libcsc \
     libdisplaycolor_default \
+    libdove_compiler \
     libdrm_sgpu \
     libdrmresource \
+    libeagle_compiler \
     libegis_fp_normal_sensor_test \
     libeis_core \
     libeis_utils \
     libengmode_client \
     libenn_common_utils \
     libenn_cpu_operators \
+    libenn_engine \
     libenn_engine_lib \
     libenn_model \
     libenn_public_api_cpp_lib \
     libenn_user_driver_cpu \
+    libenn_user_driver_gpu \
     libenn_user_driver_gpu_lib \
     libenn_user_driver_unified \
     libenn_user_lib \
@@ -239,6 +217,8 @@ PRODUCT_PACKAGES += \
     libfloatingfeature \
     libgf_in_system_lib \
     libgiantmscl \
+    libgraphgen \
+    libgraphgen_api \
     libhdrwrapper \
     libhermes_bdbridge \
     libhermes_cred \
@@ -246,11 +226,18 @@ PRODUCT_PACKAGES += \
     libhwjsqz \
     libhwvault \
     libion_exynos \
+    libipv \
+    libir \
+    libisa \
+    libisa_generator \
     liblastaboxmsg \
     libmpbase \
+    libncp_wrapper \
+    libnpu_compiler \
     libprofileparamstorage \
     libqfp_sensortest \
     libril_sem \
+    libsait_npu_compiler \
     libsamsungcamerahal \
     libsamsungcamerahalutils \
     libsamsungcamerahwl_impl \
@@ -286,6 +273,7 @@ PRODUCT_PACKAGES += \
     libuniplugin \
     libuuid_vendor \
     libvdis_core \
+    libveriben_lib \
     libvkmanager_vendor \
     libvpl \
     libvpl_dof \
@@ -314,12 +302,14 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.thermal-V1-ndk \
     vendor.samsung.hardware.thermal@1.0 \
     vendor.samsung.libcolor.hardware \
+    vendor.samsung_slsi.hardware.enn_aidl-V1-ndk \
     vendor.samsung_slsi.hardware.epic-V1-ndk \
     vendor.samsung_slsi.hardware.epic@1.0 \
     com.google.android.widevine.nonupdatable \
     HotwordEnrollmentOKGoogleEx4CORTEXM55 \
     HotwordEnrollmentXGoogleEx4CORTEXM55 \
     com.android.hotwordenrollment.common.util \
+    enn-default.xml \
     hwc3.xml \
     iweaver_aidl_v2_manifest.xml \
     sec-nfc-service.xml \
@@ -333,6 +323,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper-service \
     android.hardware.graphics.allocator-aidl-service-sgr \
     android.hardware.graphics.composer3-service.exynos \
+    android.hardware.neuralnetworks-service-enn \
     android.hardware.security.keymint-service.samsung \
     gps \
     gpsd_K43 \
@@ -341,6 +332,6 @@ PRODUCT_PACKAGES += \
     sec.android.hardware.nfc-service \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.gnss-service \
-    init.insmod \
+    vendor.samsung_slsi.hardware.enn_aidl-service \
     tzdaemon \
     tzts_daemon
