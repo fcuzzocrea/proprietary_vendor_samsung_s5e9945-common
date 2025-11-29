@@ -11,20 +11,15 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e9945/proprietary/vendor/etc/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/LVACFS_Configuration.txt \
     vendor/samsung/s5e9945/proprietary/vendor/etc/enn/custom_mode_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/enn/custom_mode_config.json \
     vendor/samsung/s5e9945/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
+    vendor/samsung/s5e9945/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/hwc3.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/sec-nfc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sec-nfc-service.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss-service.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/nfc/sec_s3nsen6_hwreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen6_hwreg.bin \
     vendor/samsung/s5e9945/proprietary/vendor/etc/nfc/sec_s3nsen6_swreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen6_swreg.bin \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
     vendor/samsung/s5e9945/proprietary/vendor/etc/sound_trigger_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_info.xml \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/00_generic_xtalk_shape.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/00_generic_xtalk_shape.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/APBargeIn_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APBargeIn_AUDIO_SLSI.bin \
@@ -129,32 +124,18 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e9945/proprietary/vendor/tee/tui/resolution_common/ID00000100:$(TARGET_COPY_OUT_VENDOR)/tee/tui/resolution_common/ID00000100
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-resources_samsung \
-    android.hardware.graphics.composer@2.2-resources_samsung \
-    android.hardware.graphics.extension.composer3-V1-ndk \
     gnss_aidl_lib \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@1.1-impl-qti \
-    android.hardware.graphics.mapper@4.0-impl-sgr \
     audio.primary.s5e9945 \
     gatekeeper.s5e9945 \
     sound_trigger.primary.s5e9945 \
     vulkan.samsung \
     libExtIDRC \
     libExtIRTA \
-    libExynosC2Av1Dec \
-    libExynosC2ComponentStore \
-    libExynosC2H264Dec \
-    libExynosC2H264Enc \
-    libExynosC2HevcDec \
-    libExynosC2HevcEnc \
-    libExynosC2Vp8Dec \
-    libExynosC2Vp8Enc \
-    libExynosC2Vp9Dec \
-    libExynosC2Vp9Enc \
-    libExynosHWCService \
     libIMUSensor \
     libIRTA \
+    libImageFormatConverter \
     libOpenCL \
     libSamsungPostProcessConvertor \
     libTsAwb_front \
@@ -172,7 +153,6 @@ PRODUCT_PACKAGES += \
     lib_lvacfs \
     lib_profiler \
     lib_soundaliveresampler \
-    libacryl \
     libalsautils_sec \
     libaudio-ril \
     libaudioparamupdate \
@@ -183,15 +163,10 @@ PRODUCT_PACKAGES += \
     libcdi_wrapper \
     libcommon \
     libcrane_compiler \
-    libcsc \
-    libdisplaycolor_default \
     libdove_compiler \
-    libdrm_sgpu \
-    libdrmresource \
     libeagle_compiler \
     libegis_fp_normal_sensor_test \
     libeis_core \
-    libeis_utils \
     libengmode_client \
     libenn_common_utils \
     libenn_cpu_operators \
@@ -204,28 +179,16 @@ PRODUCT_PACKAGES += \
     libenn_user_driver_gpu_lib \
     libenn_user_driver_unified \
     libenn_user_lib \
-    libepic_helper \
-    libepicoperator \
     libexynos_sensor_interface \
-    libexynosdisplay \
-    libexynosgdc \
-    libexynosgraphicbuffer \
-    libexynosgraphicbuffer_core \
-    libexynosscaler \
-    libexynosutils \
-    libexynosv4l2 \
     libfloatingfeature \
     libgf_in_system_lib \
-    libgiantmscl \
     libgraphgen \
     libgraphgen_api \
     libhdrwrapper \
     libhermes_bdbridge \
     libhermes_cred \
-    libhwjpeg \
     libhwjsqz \
     libhwvault \
-    libion_exynos \
     libipv \
     libir \
     libisa \
@@ -236,12 +199,13 @@ PRODUCT_PACKAGES += \
     libnpu_compiler \
     libprofileparamstorage \
     libqfp_sensortest \
+    librechdr10plus.plugin \
+    librechdr10plus \
     libril_sem \
     libsait_npu_compiler \
     libsamsungcamerahal \
     libsamsungcamerahalutils \
     libsamsungcamerahwl_impl \
-    libsbwchelper \
     libsec-ril \
     libsec_esek \
     libsec_semHalTlc \
@@ -278,7 +242,6 @@ PRODUCT_PACKAGES += \
     libvpl \
     libvpl_dof \
     libwrappergps \
-    nfc_nci_sec \
     sensors.sensorhub \
     libaudioeffectoffload \
     libmyspace \
@@ -289,7 +252,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.camera.provider-V1-ndk \
     vendor.samsung.hardware.gnss-V3-ndk \
     vendor.samsung.hardware.keymint-V3-ndk \
-    vendor.samsung.hardware.nfc_aidl-V1-ndk \
     vendor.samsung.hardware.radio-V1-ndk \
     vendor.samsung.hardware.radio.bridge-V1-ndk \
     vendor.samsung.hardware.radio.channel-V1-ndk \
@@ -303,17 +265,12 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.thermal@1.0 \
     vendor.samsung.libcolor.hardware \
     vendor.samsung_slsi.hardware.enn_aidl-V1-ndk \
-    vendor.samsung_slsi.hardware.epic-V1-ndk \
-    vendor.samsung_slsi.hardware.epic@1.0 \
     com.google.android.widevine.nonupdatable \
     HotwordEnrollmentOKGoogleEx4CORTEXM55 \
     HotwordEnrollmentXGoogleEx4CORTEXM55 \
     com.android.hotwordenrollment.common.util \
     enn-default.xml \
-    hwc3.xml \
     iweaver_aidl_v2_manifest.xml \
-    sec-nfc-service.xml \
-    sec_c2_manifest_default0_1_2.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
     vendor.samsung.hardware.sehradio_manifest_2_34.xml \
@@ -321,15 +278,11 @@ PRODUCT_PACKAGES += \
     hermesd \
     android.hardware.bluetooth@1.1-service-qti \
     android.hardware.gatekeeper-service \
-    android.hardware.graphics.allocator-aidl-service-sgr \
-    android.hardware.graphics.composer3-service.exynos \
     android.hardware.neuralnetworks-service-enn \
     android.hardware.security.keymint-service.samsung \
     gps \
     gpsd_K43 \
     rild \
-    samsung.hardware.media.c2@1.2-service \
-    sec.android.hardware.nfc-service \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.gnss-service \
     vendor.samsung_slsi.hardware.enn_aidl-service \
