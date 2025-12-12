@@ -14,6 +14,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e9945/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.rc \
+    vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
@@ -127,6 +128,7 @@ PRODUCT_PACKAGES += \
     gnss_aidl_lib \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@1.1-impl-qti \
+    android.hardware.graphics.mapper@4.0-impl-sgr \
     audio.primary.s5e9945 \
     gatekeeper.s5e9945 \
     sound_trigger.primary.s5e9945 \
@@ -278,6 +280,7 @@ PRODUCT_PACKAGES += \
     hermesd \
     android.hardware.bluetooth@1.1-service-qti \
     android.hardware.gatekeeper-service \
+    android.hardware.graphics.allocator-aidl-service-sgr \
     android.hardware.neuralnetworks-service-enn \
     android.hardware.security.keymint-service.samsung \
     gps \

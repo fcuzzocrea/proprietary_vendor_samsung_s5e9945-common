@@ -113,6 +113,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.mapper@4.0-impl-sgr",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-sgr.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libeis_utils",
+                "libgralloctypes",
+                "libhardware",
+                "libhidlbase",
+                "libion_exynos",
+                "liblog",
+                "libutils",
+                "android.hardware.graphics.mapper@4.0",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "audio.primary.s5e9945",
     owner: "samsung",
     strip: {
@@ -4218,6 +4254,42 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libutils",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.graphics.allocator-aidl-service-sgr",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.graphics.allocator-aidl-service-sgr",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libeis_utils",
+                "libgralloctypes",
+                "libhardware",
+                "libhidlbase",
+                "libion_exynos",
+                "liblog",
+                "libutils",
+                "android.hardware.graphics.allocator-V1-ndk",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
