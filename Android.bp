@@ -113,42 +113,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.graphics.mapper@4.0-impl-sgr",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-sgr.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libeis_utils",
-                "libgralloctypes",
-                "libhardware",
-                "libhidlbase",
-                "libion_exynos",
-                "liblog",
-                "libutils",
-                "android.hardware.graphics.mapper@4.0",
-                "libsync",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "audio.primary.s5e9945",
     owner: "samsung",
     strip: {
@@ -171,6 +135,7 @@ cc_prebuilt_library_shared {
                 "librecordalive",
                 "libspeakercalibration",
                 "libsecaudiolevel",
+                "libutils",
                 "liblastaboxmsg",
                 "libaudioroute_samsung",
                 "libtinyalsa_samsung",
@@ -321,7 +286,6 @@ cc_prebuilt_library_shared {
                 "libTsPrc_front",
                 "libTsAwb_rear",
                 "libTsPrc_rear",
-                "libtflitecore",
                 "libcutils",
                 "libc",
                 "libm",
@@ -801,7 +765,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "liblog",
-                "libprotobuf-cpp-full",
+                "libprotobuf-cpp-full-21.12-vendorcompat",
                 "libutils",
                 "libc++",
                 "libc",
@@ -959,6 +923,7 @@ cc_prebuilt_library_shared {
                 "librecordalive",
                 "libspeakercalibration",
                 "libsecaudiolevel",
+                "libutils",
                 "liblastaboxmsg",
                 "libaudioparamupdate",
                 "libc++",
@@ -1577,6 +1542,54 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynos_logger",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libexynos_logger.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynos_profiler",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libexynos_profiler.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
             ],
         },
     },
@@ -2415,7 +2428,7 @@ cc_prebuilt_library_shared {
                 "libjsoncpp",
                 "libVendorSemTelephonyProps",
                 "libVendorSemDataProps",
-                "libprotobuf-cpp-full",
+                "libprotobuf-cpp-full-21.12-vendorcompat",
                 "libvkmanager_vendor",
                 "libengmode_client",
                 "libbase",
@@ -2448,12 +2461,16 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsec_esek.so",
             ],
             shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
                 "libspictrl",
                 "libsec_semHalTlc",
                 "libsec_semRil",
-                "liblog",
+                "libc++",
                 "libc",
                 "libm",
+                "libdl",
             ],
         },
     },
@@ -3076,30 +3093,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtflitecore",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libtflitecore.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libm",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libtinyalsa_samsung",
     owner: "samsung",
     strip: {
@@ -3444,6 +3437,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.sensors@2.1",
                 "libcutils",
                 "liblog",
+                "libbase",
                 "libhidlbase",
                 "libhidltransport",
                 "libutils",
@@ -4091,6 +4085,15 @@ dex_import {
 }
 
 prebuilt_etc_xml {
+    name: "android.hardware.neuralnetworks-service-enn.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.neuralnetworks-service-enn.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "enn-default.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/enn-default.xml",
@@ -4165,6 +4168,58 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "gflow",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/gflow",
+            ],
+            shared_libs: [
+                "libexynos_profiler",
+                "libexynos_logger",
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "gperf",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/gperf",
+            ],
+            shared_libs: [
+                "libexynos_profiler",
+                "libexynos_logger",
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "hermesd",
     owner: "samsung",
     target: {
@@ -4191,6 +4246,30 @@ cc_prebuilt_binary {
                 "libc",
                 "libm",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "htsd",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/htsd",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
             ],
         },
     },
@@ -4254,42 +4333,6 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.graphics.allocator-aidl-service-sgr",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.graphics.allocator-aidl-service-sgr",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libeis_utils",
-                "libgralloctypes",
-                "libhardware",
-                "libhidlbase",
-                "libion_exynos",
-                "liblog",
-                "libutils",
-                "android.hardware.graphics.allocator-V1-ndk",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -4423,10 +4466,11 @@ cc_prebuilt_binary {
                 "liblog",
                 "libm",
                 "libandroid_net",
+                "libcurl",
                 "libssl",
                 "libcrypto",
-                "libcurl",
                 "libz",
+                "libcutils",
                 "libdl",
                 "libc",
             ],
@@ -4536,6 +4580,8 @@ cc_prebuilt_binary {
                 "libdl",
                 "liblog",
                 "libz",
+                "libssl",
+                "libcrypto",
                 "libc",
             ],
         },

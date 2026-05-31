@@ -12,11 +12,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e9945/proprietary/vendor/etc/enn/custom_mode_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/enn/custom_mode_config.json \
     vendor/samsung/s5e9945/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
     vendor/samsung/s5e9945/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
+    vendor/samsung/s5e9945/proprietary/vendor/etc/hts.json:$(TARGET_COPY_OUT_VENDOR)/etc/hts.json \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.rc \
-    vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-aidl-service-sgr.rc \
+    vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.neuralnetworks-service-enn.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-service-enn.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
+    vendor/samsung/s5e9945/proprietary/vendor/etc/init/enn-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/enn-lazy.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss-service.rc \
     vendor/samsung/s5e9945/proprietary/vendor/etc/nfc/sec_s3nsen6_hwreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen6_hwreg.bin \
@@ -65,7 +67,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/dsp_ivp_pm.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_ivp_pm.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/dsp_reloc_rules.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_reloc_rules.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/eis_stab_strength.json:$(TARGET_COPY_OUT_VENDOR)/firmware/eis_stab_strength.json \
-    vendor/samsung/s5e9945/proprietary/vendor/firmware/gnss/firmware_signed_b7rxxx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gnss/firmware_signed_b7rxxx.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/gnss/firmware_signed_e1sksx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gnss/firmware_signed_e1sksx.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/gnss/firmware_signed_e1sxxx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gnss/firmware_signed_e1sxxx.bin \
     vendor/samsung/s5e9945/proprietary/vendor/firmware/gnss/firmware_signed_e2sksx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gnss/firmware_signed_e2sksx.bin \
@@ -128,7 +129,6 @@ PRODUCT_PACKAGES += \
     gnss_aidl_lib \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@1.1-impl-qti \
-    android.hardware.graphics.mapper@4.0-impl-sgr \
     audio.primary.s5e9945 \
     gatekeeper.s5e9945 \
     sound_trigger.primary.s5e9945 \
@@ -181,6 +181,8 @@ PRODUCT_PACKAGES += \
     libenn_user_driver_gpu_lib \
     libenn_user_driver_unified \
     libenn_user_lib \
+    libexynos_logger \
+    libexynos_profiler \
     libexynos_sensor_interface \
     libfloatingfeature \
     libgf_in_system_lib \
@@ -231,7 +233,6 @@ PRODUCT_PACKAGES += \
     libspictrl \
     libsynaFpSensorTestNwd \
     libteecl \
-    libtflitecore \
     libtinyalsa_samsung \
     libtriplecam_video_optical_zoom \
     libtriplepreview_interface \
@@ -271,16 +272,19 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleEx4CORTEXM55 \
     HotwordEnrollmentXGoogleEx4CORTEXM55 \
     com.android.hotwordenrollment.common.util \
+    android.hardware.neuralnetworks-service-enn.xml \
     enn-default.xml \
     iweaver_aidl_v2_manifest.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
     vendor.samsung.hardware.sehradio_manifest_2_34.xml \
     dmd \
+    gflow \
+    gperf \
     hermesd \
+    htsd \
     android.hardware.bluetooth@1.1-service-qti \
     android.hardware.gatekeeper-service \
-    android.hardware.graphics.allocator-aidl-service-sgr \
     android.hardware.neuralnetworks-service-enn \
     android.hardware.security.keymint-service.samsung \
     gps \

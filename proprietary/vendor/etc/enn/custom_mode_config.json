@@ -99,7 +99,7 @@
                 "SCHED_CPU_AFFINITY_THREAD_ENN_LIB": 112,
                 "MEM_MO_SCEN_ID_CUSTOMIZED": 1,
                 "MEM_LLC_SIZE_NPUDSP_SDMA": 2048,
-                "FREQ_MINLOCK_MIF": 1539000,
+                "FREQ_MINLOCK_MIF": 2088000,
             },
             "TIME_RANGE": {
                 "MODEL_OPEN": "off",
@@ -126,6 +126,27 @@
             },
             "TIME_RANGE": {
                 "MODEL_OPEN": "off",
+                "MODEL_EXECUTE": "on",
+                "MODEL_CLOSE": "off",
+            },
+            "TIME_RANGE_COALESCING": "off",
+        },
+
+        // AI Highresolution        	        
+        {
+            "ID": 100100,
+            "PERF_CONFIG": {
+                "SCHED_COMMON_TARGET_LATENCY": 1,
+                "SCHED_CPU_AFFINITY_THREAD_ENN_LIB": 112,
+                "FREQ_MINLOCK_GPU": 1109000,
+                "FREQ_MINLOCK_CPU_MID_LOW": 2592000,
+                "FREQ_MINLOCK_MIF": 4206000,
+                "FREQ_MINLOCK_INT": 533000,
+                "MEM_MO_SCEN_ID_CUSTOMIZED": 1,
+                "MEM_LLC_SIZE_NPUDSP_SDMA": 2048,
+            },
+            "TIME_RANGE": {
+                "MODEL_OPEN": "on",
                 "MODEL_EXECUTE": "on",
                 "MODEL_CLOSE": "off",
             },
